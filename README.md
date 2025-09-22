@@ -7,6 +7,33 @@ Minimal containerized demos for running AI models with Docker Model Runner.
 - Docker Desktop with Model Runner enabled (enable TCP access on port 12434)
 - To switch models, edit `window.MODEL` in `frontend_demos/config.js` and restart containers
 
+## Docker Model Runner Commands
+
+Docker Model Runner provides commands to manage AI models. Here are some useful commands for basic usage:
+
+### Pull a Model
+
+To pull a model from Docker Hub or HuggingFace:
+
+```bash
+docker model pull ai/smollm2:135M-Q4_K_M
+```
+
+### Other Useful Commands
+
+- **List pulled models**: `docker model list`
+- **List running models**: `docker model ps`
+- **Run a model interactively**: `docker model run <model-name>`
+- **Check status**: `docker model status`
+- **Show disk usage**: `docker model df`
+- **Inspect a model**: `docker model inspect <model-name>`
+- **Remove a model**: `docker model rm <model-name>`
+- **Unload running models**: `docker model unload`
+- **View logs**: `docker model logs`
+- **Show version**: `docker model version`
+
+For more information on any command, run `docker model COMMAND --help`.
+
 ## Quick Start
 
 1. Clone the repo: `git clone <repo-url>`
